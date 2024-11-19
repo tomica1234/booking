@@ -13,7 +13,7 @@ creds = ServiceAccountCredentials.from_json_keyfile_dict(service_account_info, s
 client = gspread.authorize(creds)
 
 # Google Sheetを開く
-sheet = client.open("app").worksheet("booking")
+sheet = client.open("booking").worksheet("booking")
 
 # Google SheetをPandas DataFrameに読み込む
 def load_data():
