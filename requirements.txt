@@ -1,0 +1,6 @@
+streamlit
+streamlit-calendar
+pandas
+gspread
+oauth2client
+python-dateutil
