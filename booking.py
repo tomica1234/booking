@@ -99,7 +99,7 @@ with st.form("add_data_form"):
             # データをスプレッドシートに追加
             sheet.append_row(new_data)
             st.success(f"予約が正常に追加されました！ ID: {new_id}")
-            st.experimental_rerun()
+            st.rerun()
 
 
 # 予約削除フォーム
@@ -114,7 +114,7 @@ with st.form("delete_data_form_unique"):
                 row_to_delete = int(data[data['id'] == delete_id].index[0] + 2)  # ヘッダーを考慮して+2
                 sheet.delete_rows(row_to_delete)
                 st.success(f"ID {delete_id} の予約を削除しました。")
-                st.experimental_rerun()
+                st.rerun()
             else:
                 st.error(f"ID {delete_id} が見つかりません。")
         except Exception as e:
